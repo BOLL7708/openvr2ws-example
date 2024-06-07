@@ -1,0 +1,31 @@
+{
+  "name": "openvr2ws-example",
+  "version": "2.8.4",
+  "description": "Example of a client for OpenVR2WS",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BOLL7708/openvr2ws-example.git"
+  },
+  "keywords": [
+    "openvr",
+    "openvr2ws",
+    "websocket",
+    "browser"
+  ],
+  "author": "BOLL7708",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BOLL7708/openvr2ws-example/issues"
+  },
+  "homepage": "https://github.com/BOLL7708/openvr2ws-example#readme",
+  "dependencies": {
+    "openvr2ws-types": "^2.8.3"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}

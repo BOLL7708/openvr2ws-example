@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>OpenVR2WS Example Client</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+<h2>WebSocket Test</h2>
+
+<div>
+    <!--<button onclick="requestAnalogInputData();">Get Analog Data</button>
+    <button onclick="requestPoseInputData();">Get Pose Data</button>
+    <div id="requests"></div>-->
+    <button id="getIDs">Get IDs</button>
+    <button id="getPlayArea">Get play area</button>
+    <button id="getProperties">Get properties</button>
+    <button id="startLoop">Start Loop</button>
+    <button id="stopLoop">Stop Loop</button>
+</div>
+<div id="remoteSettings" style="float:left;">
+    <h3>Remote Settings</h3>
+    <ul>
+        <li><label for="password">Password: </label><input id="password" type="password" value="test"/></li>
+        <li><label for="section">Section: </label><input id="section" type="text" value="steamvr"/></li>
+        <li><label for="setting">Setting: </label><input id="setting" type="text" value="hmdDisplayColorGainR"/></li>
+        <li><label for="value">Value: </label><input id="value" type="text" value="4.0"/></li>
+        <li><label for="type">Type: </label><input id="type" type="text" list="remoteSettingTypes" value="Float"/></li>
+        <li>
+            <datalist id="remoteSettingTypes">
+                <option value="Bool">
+                <option value="Int32">
+                <option value="Float">
+                <option value="String">
+            </datalist>
+        </li>
+        <li>
+            <button id="sendRemoteSetting">Send</button>
+        </li>
+    </ul>
+    <div class="pre" id="remoteSettingOutput"></div>
+</div>
+<div class="pre" id="output"></div>
+<div class="pre" id="applicationInfo"></div>
+<div class="pre" id="properties"></div>
+<div class="pre" id="playArea"></div>
+<div class="pre" id="deviceIds"></div>
+<div class="pre" id="input"></div>
+<div class="pre" id="inputAnalog"></div>
+<div class="pre" id="inputPose"></div>
+</body>
+<script type="module">
+    import Site from './dist/Site.js'
+    const site = new Site()
+    site.init()
+    document.getElementById('getIDs').onclick = site.requestDeviceIds
+    document.getElementById('getPlayArea').onclick = site.requestPlayArea
+    document.getElementById('getProperties').onclick = site.requestProperties
+    document.getElementById('startLoop').onclick = site.startRequestLoop
+    document.getElementById('stopLoop').onclick = site.stopRequestLoop
+    document.getElementById('sendRemoteSetting').onclick = site.sendRemoteSetting
+</script>
+</html>
