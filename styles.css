@@ -1,0 +1,27 @@
+body {
+    color: white;
+    background: black;
+    font-family: Consolas, monospace;
+    font-size: 75%;
+}
+pre, p {
+    margin: 0; padding: 0;
+}
+div {
+    padding: 1px;
+    margin: 1px;
+}
+.pre {
+    border: 1px gray solid;
+    float: left;
+    white-space: pre;
+}
+#output { color: aqua; }
+#requests { color: white; }
+#properties { color: gray; }
+#deviceIds { color: lightgray; }
+#input { color: lime; }
+#inputAnalog { color: yellow; }
+#inputPose { color: pink; }
+#applicationInfo { color: orange; }
+#playArea { color: tomato; }
